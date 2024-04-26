@@ -11,10 +11,19 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/windowBackground"
+        android:background="@color/cyan"
         android:gravity="center"
         android:orientation="vertical"
         tools:context=".view.activity.UpdateActivity">
+
+        <androidx.constraintlayout.utils.widget.MotionLabel
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:gravity="center"
+            android:text="Edit Note"
+            android:textColor="@color/pink"
+            android:textSize="50dp" />
 
         <EditText
             android:id="@+id/titleEdit"
@@ -24,7 +33,7 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/search_note_background"
             android:fontFamily="@font/ubuntu_bold"
-            android:hint="Type Note title"
+            android:hint="Title"
             android:inputType="text"
             android:maxLines="1"
             android:paddingStart="10dp" />
@@ -38,7 +47,7 @@
             android:background="@drawable/search_note_background"
             android:fontFamily="@font/ubuntu_bold"
             android:gravity="top"
-            android:hint="Type Your Note"
+            android:hint="Note Text"
             android:includeFontPadding="false"
             android:inputType="textMultiLine"
             android:minHeight="200dp"
@@ -58,12 +67,12 @@
             android:insetTop="0dp"
             android:insetRight="0dp"
             android:insetBottom="0dp"
-            android:text="Mettre à jour"
-            android:textColor="@color/white"
+            android:text="Update Note"
+            android:textColor="@color/pink"
 
             android:textSize="15sp"
             android:textStyle="bold"
-            app:backgroundTint="#08A50E"
+            app:backgroundTint="#22DFBA"
             app:cornerRadius="10dp" />
 
     </LinearLayout>

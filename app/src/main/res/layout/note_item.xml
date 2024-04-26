@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         app:strokeColor="@color/colorPrimary"
-        app:cardBackgroundColor="@color/colorPrimaryDark">
+        app:cardBackgroundColor="@color/saumon">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,7 +25,7 @@
                 android:text="Note title"
                 android:textSize="25sp"
                 android:textStyle="italic"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="@color/black"
                 android:fontFamily="@font/protest_riot_regular"
                 android:paddingStart="20dp"
                 android:gravity="center_vertical" />
@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/example"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:fontFamily="@font/ubuntu_bold"
                 android:textAlignment="center"
                 android:paddingHorizontal="20dp"
@@ -54,7 +54,7 @@
                 android:paddingVertical="10dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical|end"
-                android:background="#101010">
+                android:background="#B98B82">
 
                 <ImageView
                     android:id="@+id/editNoteImage"
