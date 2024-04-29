@@ -10,15 +10,26 @@ import com.eseo.noteapp.R
 import com.eseo.noteapp.model.entity.Note
 import com.eseo.noteapp.databinding.ActivityAddBinding
 
+/**
+ * Activité pour ajouter une note.
+ */
 class AddActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddBinding
 
+    /**
+     * Méthode appelée à la création de l'activité.
+     *
+     * @param savedInstanceState L'état sauvegardé de l'application.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_add )
 
+        /**
+         * Définit l'action à effectuer lors du clic sur le bouton de confirmation.
+         */
         binding.confirmButton.setOnClickListener {
 
             val replyIntent = Intent()
@@ -39,6 +50,9 @@ class AddActivity : AppCompatActivity() {
     }
 
     companion object {
+        /**
+         * Constante pour la clé de l'intent de réponse.
+         */
         val EXTRA_REPLY: String = "com.eseo.android.noteapp.REPLY"
     }
 }

@@ -17,6 +17,9 @@ import com.eseo.noteapp.view.adapter.NoteAdapter
 import com.eseo.noteapp.viewmodel.NoteViewModel
 import com.eseo.noteapp.viewmodel.NoteViewModelFactory
 
+/**
+ * Activité pour afficher les notes.
+ */
 class NoteActivity : AppCompatActivity() {
 
     private val newNoteActivityRequestCode = 1
@@ -28,6 +31,11 @@ class NoteActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNoteBinding
     private lateinit var noteAdapter: NoteAdapter
 
+    /**
+     * Méthode appelée à la création de l'activité.
+     *
+     * @param savedInstanceState L'état sauvegardé de l'application.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -47,7 +55,9 @@ class NoteActivity : AppCompatActivity() {
         }
     }
 
-
+    /**
+     * Configure le RecyclerView pour afficher les notes.
+     */
     private fun setNoteRecycler() {
         binding.noteRecycler.apply {
             adapter = noteAdapter
@@ -56,6 +66,13 @@ class NoteActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Méthode appelée lorsqu'une activité lancée avec startActivityForResult se termine.
+     *
+     * @param requestCode Le code de requête passé à startActivityForResult.
+     * @param resultCode Le code de résultat renvoyé par l'activité enfant.
+     * @param intentData Un Intent qui peut renvoyer des données de résultat à l'appelant.
+     */
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, intentData: Intent?) {
         super.onActivityResult(requestCode, resultCode, intentData)
